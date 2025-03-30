@@ -1,0 +1,168 @@
+# --- Python Virtual Environments ---
+# Never commit your virtual environment folders
+venv/
+env/
+.venv/
+.env/
+ENV/
+*/ENV/
+*/venv/
+*/.venv/
+*/.env/
+
+# --- Python Bytecode and Compiled Files ---
+*.pyc
+__pycache__/
+*.so
+*.pyd
+
+# --- Distribution / Packaging ---
+build/
+dist/
+sdist/
+wheelhouse/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+develop-eggs/
+parts/
+*.manifest
+*.spec
+
+# --- Jupyter Notebook ---
+# Checkpoints folder created by Jupyter
+.ipynb_checkpoints/
+
+# Temporary files from nbconvert
+*.nbconvert.ipynb
+
+# NOTE: Notebook OUTPUT CELLS often bloat repos and make diffs hard.
+# Consider using a tool like `nbstripout` to automatically clear output before committing.
+# Installation: pip install nbstripout
+# Setup (run in repo): nbstripout --install
+# If you want to *never* commit notebooks (uncommon), uncomment below:
+# *.ipynb
+
+# HTML / PDF / Other output formats generated from notebooks (if not needed in repo)
+# *.html
+# *.pdf
+# Be cautious if you have legitimate source HTML/PDF files you *do* want to commit.
+
+# --- Data Files ---
+# It's best practice to store large data files outside Git (e.g., S3, GCS, network drive).
+# Ignore common data directories and file extensions often used for large data.
+data/
+datasets/
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.feather
+*.arrow
+*.avro
+*.xls
+*.xlsx
+# If you have *small* data files (e.g., config, small examples) that *should* be tracked,
+# you can force-add them (`git add -f path/to/your/small_data.csv`) or make the
+# ignore patterns more specific (e.g., `data/*.csv` instead of `*.csv`).
+
+# --- Model Files ---
+# Trained models are usually large binary files and shouldn't be in Git.
+models/
+saved_models/
+*.pt
+*.pth
+*.onnx
+*.pb
+*.keras
+*.h5 # Note: Also used for data, be specific if possible (e.g., models/*.h5)
+*.joblib
+*.model
+*.ckpt* # Checkpoint files from ML frameworks
+
+# --- Logs ---
+logs/
+*.log
+log/
+
+# --- Testing and Coverage ---
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+nosetests.xml
+junit/
+
+# --- IDE / Editor Files ---
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# Vim / Emacs temporary files
+*~
+.#*
+*.swp
+*.swo
+
+# --- OS-specific files ---
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db # Folder config file
+
+# Windows
+Thumbs.db
+ehthumbs_vista.db
+Desktop.ini
+
+# --- Experiment Tracking ---
+# MLflow
+mlruns/
+
+# Weights & Biases
+wandb/
+
+# DVC (Data Version Control - internal cache/temp, keep .dvc files themselves)
+.dvc/cache
+.dvc/tmp
+.dvc/state
+
+# --- Other ---
+# Secrets / Credentials - NEVER commit these!
+credentials.json
+secrets.yaml
+*.env # Often used for environment variables/secrets
+*.pem
+*.key
+
+# User-specific files or temporary outputs
+output/
+results/
+temp/
+tmp/
+
+# Add any other project-specific files/folders you want to ignore below:
+# my_temporary_folder/
+# specific_large_output_file.xyz
